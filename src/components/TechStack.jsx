@@ -127,8 +127,8 @@ export default function TechStack({
   }, []);
 
   return (
-    <section className="w-full py-12 -mt-[6%] sm:py-16 bg-[#e5dfac] cursor-pointer">
-      <h2 className="techTitle text-5xl font-serif text-red-500 mx-5">
+    <section className="w-full py-12 md-mt-[6%] -mt-[15%]  sm:py-16 bg-[#e5dfac] cursor-pointer">
+      <h2 className="techTitle md:text-5xl text-3xl font-serif text-red-500 mx-5">
         TechStack
       </h2>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

@@ -46,7 +46,7 @@ function Navbar() {
   return (
     <div
       ref={navRef}
-      className="fixed bottom-8 left-1/2 -translate-x-1/2 
+      className="md:fixed hidden bottom-8 left-1/2 -translate-x-1/2 
                  w-[90%] sm:w-[70%] md:w-[50%] 
                  bg-[#ece6b0] rounded-2xl shadow-lg border border-[#ddd]
                  p-4 select-none cursor-[url('src/assets/grab.svg'),_grab] z-30"

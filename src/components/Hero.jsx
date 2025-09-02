@@ -10,9 +10,46 @@ function Hero() {
   const text = "Hello this is Nand Kishore A Frontend developer";
   const letters = text.split("");
   const textRef = useRef(null);
+  const mobileText = useRef(null);
   const emojiRef = useRef(null);
   const divRef = useRef(null);
   useEffect(() => {
+    const tlm = gsap.timeline();
+    tlm.fromTo(
+      ".upToDown",
+      { opacity: 0, y: -200, borderRadius: 70 },
+      { opacity: 1, y: 0, borderRadius: 0, duration: 1.2 }
+    );
+    tlm.fromTo(
+      ".mobile-hero",
+      {
+        opacity: 0,
+        scale: 0.9,
+      },
+      {
+        opacity: 1,
+        scale: 1,
+        delay: 0.2,
+        duration: 1.2,
+      }
+    );
+    tlm.to(
+      mobileText.current.children,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        stagger: 0.055,
+      },
+      "-=1.0" // start slightly before previous ends for smoothness
+    );
+
+    gsap.fromTo(
+      ".downToUp",
+      { opacity: 0, y: 200, borderRadius: 70 },
+      { opacity: 1, y: 0, borderRadius: 0, duration: 1.2 }
+    );
+
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
     // Animate the "up" element
@@ -74,14 +111,37 @@ function Hero() {
   }, []);
   return (
     <>
+      <div className="relative md:hidden w-full h-screen">
+        <div className="upToDown w-full h-[50%] bg-[#e5dfac] rounded-sm">
+          <h1
+            className="w-[80%] py-16 px-7 mx-10  text-2xl rounded-2xl font-serif "
+            ref={mobileText}
+          >
+            {letters.map((letter, i) => (
+              <span
+                key={i}
+                className="inline-block opacity-0 translate-y-10 text-red-500"
+              >
+                {letter === " " ? "\u00A0" : letter}
+              </span>
+            ))}
+          </h1>
+        </div>
+        <div className="mobile-hero absolute top-[25%] w-[40%] p-5 bg-[#e5dfac] shadow-2xl m-[30%] mt-[10%] rounded-2xl font-serif z-10">
+          <img src={profile} alt="" className="rounded-xl" />
+        </div>
+        <div className="downToUp w-full h-[50%] bg-red-500 rounded-sm ">;</div>
+      </div>
+
       <div
-        className="w-52 text-5xl absolute top-[42%] left-[49.6%]  z-2"
+        className="hidden md:block w-52 text-5xl absolute top-[42%] left-[49.6%]  z-2"
         ref={emojiRef}
       >
         👋
       </div>
       {/* This below did should roll onScroll */}
-      <div className="w-full flex " ref={divRef}>
+
+      <div className="w-full md:flex hidden" ref={divRef}>
         <div className="w-[50%] h-screen bg-[#e5dfac] text-red-600" ref={upRef}>
           {" "}
           {/* customize focus on  hover and text color change */}
