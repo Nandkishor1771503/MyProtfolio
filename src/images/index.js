@@ -1,4 +1,4 @@
-import html from "../images/html.jpg";
+import html from "../images/Html.jpg";
 import css from "../images/css.jpg";
 import Js from "../images/JS.png";
 import react from "../images/ReactJS.png";
