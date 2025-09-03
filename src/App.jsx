@@ -6,7 +6,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Work from "./components/Work";
 import TechStack from "./components/TechStack";
-import Reviews from "./components/Reviews.Jsx";
+import Reviews from "./components/Reviews";
 import Footer from "./components/Footer";
 import LenisProvider from "./components/LenisProvider";
 function App() {
