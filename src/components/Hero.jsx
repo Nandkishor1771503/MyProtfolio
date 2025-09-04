@@ -8,7 +8,7 @@ function Hero() {
   const upRef = useRef(null);
   const downRef = useRef(null);
   const text = "Hello this is Nand Kishore A Frontend developer";
-  const letters = text.split("");
+  const letters = text.split(" ");
   const textRef = useRef(null);
   const mobileText = useRef(null);
   const emojiRef = useRef(null);
@@ -38,8 +38,8 @@ function Hero() {
       {
         opacity: 1,
         y: 0,
-        duration: 0.6,
-        stagger: 0.055,
+        duration: 1,
+        stagger: 0.18,
       },
       "-=1.0" // start slightly before previous ends for smoothness
     );
@@ -120,7 +120,7 @@ function Hero() {
             {letters.map((letter, i) => (
               <span
                 key={i}
-                className="inline-block opacity-0 translate-y-10 text-red-500"
+                className="inline-block opacity-0 translate-y-10 text-red-500 mr-2"
               >
                 {letter === " " ? "\u00A0" : letter}
               </span>
