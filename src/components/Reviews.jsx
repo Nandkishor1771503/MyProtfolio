@@ -41,7 +41,7 @@ const Data = [
 function Reviews() {
   return (
     <>
-      <div className="w-full md:h-screen h-[95%] bg-[#111] -z-10">
+      <div className="w-full md:h-screen h-screen bg-[#111] -z-10">
         <h2 className="text-[#f3f0d8] text-4xl font-serif p-10">Reviews </h2>
         <div className=" flex items-center justify-center">
           <Swiper
