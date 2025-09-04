@@ -127,7 +127,7 @@ function Hero() {
             ))}
           </h1>
         </div>
-        <div className="mobile-hero absolute top-[28%] w-[50%] p-5 bg-[#e5dfac] shadow-2xl m-[30%] mt-[10%] rounded-2xl font-serif z-10">
+        <div className="mobile-hero absolute top-[25%] w-[50%] p-5 bg-[#e5dfac] shadow-2xl m-[30%] mt-[10%] rounded-2xl font-serif z-10">
           <img src={profile} alt="" className="rounded-xl" />
         </div>
         <div className="downToUp w-full h-[60%] bg-red-500 rounded-sm ">;</div>
