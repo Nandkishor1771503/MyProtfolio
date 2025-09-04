@@ -112,7 +112,7 @@ function Hero() {
   return (
     <>
       <div className="relative md:hidden w-full h-screen">
-        <div className="upToDown w-full h-[40%] bg-[#e5dfac] rounded-sm">
+        <div className="upToDown w-full h-[50%] bg-[#e5dfac] rounded-sm">
           <h1
             className="w-[80%] py-16 px-7 mx-10  text-2xl rounded-2xl font-serif "
             ref={mobileText}
@@ -127,10 +127,10 @@ function Hero() {
             ))}
           </h1>
         </div>
-        <div className="mobile-hero absolute top-[25%] w-[50%] p-5 bg-[#e5dfac] shadow-2xl m-[30%] mt-[10%] rounded-2xl font-serif z-10">
+        <div className="mobile-hero absolute top-[25%] w-[40%] p-5 bg-[#e5dfac] shadow-2xl m-[30%] mt-[10%] rounded-2xl font-serif z-10">
           <img src={profile} alt="" className="rounded-xl" />
         </div>
-        <div className="downToUp w-full h-[60%] bg-red-500 rounded-sm ">;</div>
+        <div className="downToUp w-full h-[50%] bg-red-500 rounded-sm ">;</div>
       </div>
 
       <div
