@@ -75,16 +75,25 @@ function Hero() {
     );
 
     // Animate the letters staggered
-    tl.to(
+    tl.fromTo(
       textRef.current.children,
+       {
+        opacity: 0,
+        scale: 0.7,
+        y: 20, // start slightly lower
+      },
       {
         opacity: 1,
+        scale: 1,
         y: 0,
-        duration: 0.6,
-        stagger: 0.055,
+        delay:.3,
+        duration: 0.8, // slightly faster feels smoother
+        ease: "power3.out", // smoother easing
+        stagger: 0.12, // balanced stagger
       },
-      "-=1.0" // start slightly before previous ends for smoothness
+      "-=0.8" // overlap with previous timeline section
     );
+
     tl.fromTo(
       emojiRef.current,
       { opacity: 0, scale: 0.5 },
@@ -153,11 +162,14 @@ function Hero() {
           {" "}
           {/* customize focus on  hover and text color change */}
           <h1
-            className="w-[80%] p-5 mx-[12%] my-[30%] text-5xl rounded-2xl font-serif "
+            className="w-[85%] p-4 mx-[12%] my-[30%] text-5xl rounded-2xl font-serif "
             ref={textRef}
           >
             {letters.map((letter, i) => (
-              <span key={i} className="inline-block opacity-0 translate-y-10">
+              <span
+                key={i}
+                className="inline-block opacity-0 translate-y-10 mr-5 m-2.5"
+              >
                 {letter === " " ? "\u00A0" : letter}
               </span>
             ))}

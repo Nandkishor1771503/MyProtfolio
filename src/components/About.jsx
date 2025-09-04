@@ -38,7 +38,7 @@ function About() {
         y: 0,
         duration: 0.6,
         ease: "power2.out",
-        stagger: 0.05,
+        stagger: 0.08,
         scrollTrigger: {
           trigger: ".aboutTextWrapper",
           start: "top 70%",
@@ -80,7 +80,7 @@ function About() {
           {aboutText.map((word, i) => (
             <span
               key={i}
-              className="aboutPara inline-block mr-2 mb-1 tracking-wide leading-relaxed sm:leading-[2.5rem] md:leading-[2.7rem]"
+              className="aboutPara inline-block mr-3 mb-4 tracking-wide leading-relaxed sm:leading-[2.5rem] md:leading-[2.7rem]"
             >
               {word}
             </span>
