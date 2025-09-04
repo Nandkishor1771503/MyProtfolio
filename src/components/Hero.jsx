@@ -33,15 +33,22 @@ function Hero() {
         duration: 1.2,
       }
     );
-    tlm.to(
+    tlm.fromTo(
       mobileText.current.children,
       {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.18,
+        opacity: 0,
+        scale: 0.7,
+        y: 20, // start slightly lower
       },
-      "-=1.0" // start slightly before previous ends for smoothness
+      {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 0.8, // slightly faster feels smoother
+        ease: "power3.out", // smoother easing
+        stagger: 0.12, // balanced stagger
+      },
+      "-=0.8" // overlap with previous timeline section
     );
 
     gsap.fromTo(
@@ -114,7 +121,7 @@ function Hero() {
       <div className="relative md:hidden w-full h-screen">
         <div className="upToDown w-full h-[50%] bg-[#e5dfac] rounded-sm">
           <h1
-            className="w-[80%] py-16 px-7 mx-10  text-2xl rounded-2xl font-serif "
+            className="w-[80%] py-16 px-7 mx-10 text-2xl rounded-2xl font-serif "
             ref={mobileText}
           >
             {letters.map((letter, i) => (

@@ -103,11 +103,14 @@ function Work() {
           className="w-full max-w-[1200px] h-[400px] sm:h-[450px] md:h-[500px]"
         >
           {details &&
-            details.map(({id,title,imgSource}) => {
+            details.map(({ id, title, imgSource }) => {
               return (
-                <SwiperSlide className="!w-[70%] sm:!w-[60%] md:!w-[50%] !h-full flex items-center justify-center transition-transform duration-300 hover:scale-105" key={id}>
-                  <div className="w-full h-full bg-white/10 p-6 sm:p-10 shadow-lg rounded-2xl flex flex-col items-center justify-center">
-                    <h1 className="text-[#f3f0d8] text-2xl sm:text-3xl md:text-4xl font-serif mb-4 text-center">
+                <SwiperSlide
+                  className="!w-[70%] sm:!w-[80%] md:!w-[50%] !h-full flex items-center justify-center transition-transform duration-300 hover:scale-105"
+                  key={id}
+                >
+                  <div className="w-full h-full bg-white/10 p-6 sm:p-5 shadow-lg rounded-2xl flex flex-col items-center justify-center">
+                    <h1 className="text-[#f3f0d8] text-xl sm:text-3xl md:text-4xl font-serif mb-4 text-center">
                       {title}
                     </h1>
                     <img
