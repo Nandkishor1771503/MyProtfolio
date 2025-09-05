@@ -32,13 +32,14 @@ function About() {
 
     gsap.fromTo(
       ".aboutPara",
-      { opacity: 0, y: 20 },
+      { opacity: 0, y: 15,scale:0.95 },
       {
         opacity: 1,
+        scale:1,
         y: 0,
         duration: 0.6,
         ease: "power2.out",
-        stagger: 0.08,
+        stagger: 0.1,
         scrollTrigger: {
           trigger: ".aboutTextWrapper",
           start: "top 70%",
@@ -76,11 +77,11 @@ function About() {
         <div className="horizontal w-full sm:w-[90%] h-[3px] bg-red-600 mb-6 sm:mb-8"></div>
 
         {/* About Text */}
-        <p className="aboutTextWrapper w-full sm:w-[90%] pl-2 sm:pl-6 text-justify text-xl sm:text-2xl md:text-4xl md:mx-12 md:my-36 text-red-700 font-serif">
+        <p className="aboutTextWrapper w-full sm:w-[90%] pl-2 sm:pl-6 text-justify text-2xl  md:text-4xl md:mx-12 md:my-36 text-red-700 font-serif">
           {aboutText.map((word, i) => (
             <span
               key={i}
-              className="aboutPara inline-block mr-3 mb-4 tracking-wide leading-relaxed sm:leading-[2.5rem] md:leading-[2.7rem]"
+              className="aboutPara inline-block mr-3 mb-3 tracking-wide leading-relaxed sm:leading-[2.5rem] md:leading-[2.7rem]"
             >
               {word}
             </span>
