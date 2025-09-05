@@ -24,16 +24,16 @@ const Data = [
   },
   {
     id: 3,
-    title: "THIRD",
-    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic maiores quibusdam ad commodi corrupti temporibus.",
+    title: "Rahul",
+    para: "I run a clothing store, and NK built a website for me that exceeded my expectations. The site not only looks great but also allows me to serve my customers better. Thanks to him, I can now deliver my products online with ease. I truly appreciate his work!",
     stars: 4,
     style: "bg-green-500",
   },
   {
     id: 4,
-    title: "FOURTH",
-    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic maiores quibusdam ad commodi corrupti temporibus.",
-    stars: 4,
+    title: "Vishal",
+    para: "I needed a landing page for my business and was searching for a developer. That’s when I found Nand Kishore. He created a beautiful landing page at a very affordable price, where I can showcase all my work, services, and testimonials. This has made it so much easier for me to pitch and win clients.",
+    stars: 5,
     style: "bg-orange-500",
   },
 ];
