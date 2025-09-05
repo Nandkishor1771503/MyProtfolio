@@ -32,10 +32,10 @@ function About() {
 
     gsap.fromTo(
       ".aboutPara",
-      { opacity: 0, y: 15,scale:0.95 },
+      { opacity: 0, y: 15, scale: 0.95 },
       {
         opacity: 1,
-        scale:1,
+        scale: 1,
         y: 0,
         duration: 0.6,
         ease: "power2.out",
@@ -51,14 +51,14 @@ function About() {
 
     gsap.fromTo(
       ".aboutDiv",
-      { scale: 0.95, y: 0 },
+      { scale: 0.92, y: 0 },
       {
         scale: 1,
         y: -70,
         scrollTrigger: {
           trigger: ".aboutDiv",
           start: "top 100%",
-          end: "bottom 110%",
+          end: "bottom 115%",
           scrub: true,
         },
       }
@@ -74,14 +74,14 @@ function About() {
       </h1>
       <div className="w-full overflow-hidden">
         {/* Horizontal Line */}
-        <div className="horizontal w-full sm:w-[90%] h-[3px] bg-red-600 mb-6 sm:mb-8"></div>
+        <div className="horizontal w-full sm:w-[90%] h-[3px] bg-red-600 mb-3"></div>
 
         {/* About Text */}
-        <p className="aboutTextWrapper w-full sm:w-[90%] pl-2 sm:pl-6 text-justify text-xl  md:text-4xl md:mx-12 md:my-36 text-red-700 font-serif">
+        <p className="aboutTextWrapper w-full sm:w-[90%] pl-2 sm:pl-6 text-justify text-xl  md:text-4xl md:mx-12 md:my-20 text-red-700 font-serif">
           {aboutText.map((word, i) => (
             <span
               key={i}
-              className="aboutPara inline-block mr-3 mb-1.5 tracking-wide leading-relaxed sm:leading-[2.5rem] md:leading-[2.7rem]"
+              className="aboutPara inline-block mr-3 mb-1.5 md:mb-5 tracking-wide leading-relaxed sm:leading-[2.5rem] md:leading-[2.7rem]"
             >
               {word}
             </span>
