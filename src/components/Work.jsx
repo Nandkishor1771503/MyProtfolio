@@ -62,7 +62,7 @@ function Work() {
   }, []);
 
   return (
-    <div className="mockParent w-full md:h-screen h-[80%] overflow-hidden bg-red-600 flex flex-col items-center justify-center relative px-4 sm:px-8">
+    <div className="mockParent w-full md:h-screen h-[85%] overflow-hidden bg-red-600 flex flex-col items-center justify-center relative px-4 sm:px-8">
       <h2 className="text-[#f3f0d8] text-3xl sm:text-4xl md:text-5xl font-serif mb-10 text-center">
         MY WORK
       </h2>
