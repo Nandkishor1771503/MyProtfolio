@@ -74,7 +74,7 @@ function About() {
       </h1>
       <div className="w-full overflow-hidden">
         {/* Horizontal Line */}
-        <div className="horizontal w-full sm:w-[90%] h-[3px] bg-red-600 mb-3"></div>
+        <div className="horizontal w-full sm:w-[90%] md:h-[3px] h-[2px] bg-red-600 mb-3"></div>
 
         {/* About Text */}
         <p className="aboutTextWrapper w-full sm:w-[90%] pl-2 sm:pl-6 text-justify text-xl  md:text-4xl md:mx-12 md:my-20 text-red-700 font-serif">
