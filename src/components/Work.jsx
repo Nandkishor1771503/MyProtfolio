@@ -67,7 +67,7 @@ function Work() {
         <h2 className="text-[#f3f0d8] text-3xl sm:text-4xl md:text-5xl font-serif mb-5 text-center">
           MY WORK
         </h2>
-        <div className="w-full sm:w-[90%] h-[3px] bg-[#e5dfac] mb-10"></div>
+        <div className="w-full sm:w-[90%] md:h-[3px] h-[2px] bg-[#e5dfac] mb-10"></div>
 
         <div className="relative w-full flex items-center justify-center">
           {/* Navigation Arrows */}
