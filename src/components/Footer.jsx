@@ -44,7 +44,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="tel:+918143366416"
                   className="hover:text-white transition-colors"
                 >
                   Contact
@@ -57,22 +57,8 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <h3 className="text-xl font-semibold text-white mb-2">Connect</h3>
             <div className="flex justify-center md:justify-start space-x-4">
-              <a
-                href="https://github.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
-              >
-                <FaGithub size={24} />
-              </a>
-              <a
-                href="https://linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
-              >
-                <FaLinkedin size={24} />
-              </a>
+              
+              
               <a
                 href="https://twitter.com/"
                 target="_blank"
@@ -82,7 +68,7 @@ const Footer = () => {
                 <FaTwitter size={24} />
               </a>
               <a
-                href="mailto:youremail@example.com"
+                href="mailto:andekarsunny2004@gmail.com"
                 className="hover:text-white transition-colors"
               >
                 <FaEnvelope size={24} />
@@ -96,7 +82,7 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <p className="text-center text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} Sunny NK. All rights reserved.
+          &copy; {new Date().getFullYear()} Nand Kishore All rights reserved.
         </p>
       </div>
     </footer>
