@@ -25,21 +25,25 @@ function Work() {
       id: 1,
       title: "Agency Website",
       imgSource: mockup1,
+      url: "https://tech2408.netlify.app/",
     },
     {
       id: 2,
       title: "Restaurant website",
       imgSource: mockup2,
+      url: "https://quickbite24.netlify.app/",
     },
     {
       id: 3,
       title: "Fashion store",
       imgSource: mockup3,
+      url: "https://fashionstore119.netlify.app/",
     },
     {
       id: 4,
       title: "E-Book website",
       imgSource: mockup4,
+      
     },
   ];
 
@@ -105,23 +109,25 @@ function Work() {
             className="w-full max-w-[1200px] h-[350px] sm:h-[450px] md:h-[500px]"
           >
             {details &&
-              details.map(({ id, title, imgSource }) => {
+              details.map(({ id, title, imgSource, url }) => {
                 return (
                   <SwiperSlide
-                    className="!w-[70%] sm:!w-[80%] md:!w-[50%] !h-full flex items-center justify-center transition-transform duration-300 hover:scale-105"
-                    key={id}
-                  >
-                    <div className="w-full h-[90%] bg-white/10  shadow-lg rounded-2xl flex flex-col items-center justify-center">
-                      <h1 className="text-[#f3f0d8] text-xl sm:text-3xl md:text-4xl font-serif mb-4 text-center">
-                        {title}
-                      </h1>
-                      <img
-                        src={imgSource}
-                        alt="mockup1"
-                        className="w-[90%] sm:w-[80%] rounded-lg"
-                      />
-                    </div>
-                  </SwiperSlide>
+                      className="!w-[70%] sm:!w-[80%] md:!w-[50%] !h-full flex items-center justify-center transition-transform duration-300 hover:scale-105"
+                      key={id}
+                    >
+                  <a href={url} target="_blank">
+                      <div className="w-full h-[90%] bg-white/10  shadow-lg rounded-2xl flex flex-col items-center justify-center">
+                        <h1 className="text-[#f3f0d8] text-xl sm:text-3xl md:text-4xl font-serif mb-4 text-center">
+                          {title}
+                        </h1>
+                        <img
+                          src={imgSource}
+                          alt="mockup1"
+                          className="w-[90%] sm:w-[80%] rounded-lg"
+                        />
+                      </div>
+                  </a>
+                    </SwiperSlide>
                 );
               })}
           </Swiper>
